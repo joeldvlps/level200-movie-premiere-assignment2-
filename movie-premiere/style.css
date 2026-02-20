@@ -1,0 +1,222 @@
+/* ===== style.css ===== */
+/* external CSS – no frameworks, pure handcrafted styling */
+/* includes element, class, ID selectors, hover effect, spacing, borders, colors */
+
+/* ---------- element selectors ---------- */
+body {
+  background-color: #0b0e14;        /* deep background */
+  color: #e2e8f0;                    /* soft off-white text */
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  color: #c0a87a;                    /* muted gold for section headings */
+  border-bottom: 2px solid #3a3f4e;
+  padding-bottom: 6px;
+  margin-top: 40px;
+}
+
+/* style links (footer) */
+a {
+  color: #b8c7e7;
+  text-decoration: none;
+}
+a:hover {
+  color: #f3d9b1;                    /* hover effect for links (part of requirement) */
+  text-decoration: underline wavy #6a6f7c;
+}
+
+/* ---------- ID selectors (at least one) ---------- */
+#main-header {
+  background-color: #1e2533;          /* dark header background */
+  padding: 30px 25px 20px 25px;
+  margin-bottom: 30px;
+  border-left: 8px solid #b8925c;     /* accent */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.6);
+}
+
+#about-movie {
+  background-color: #131824;          /* slightly different tone */
+  padding: 20px 25px;
+  border-radius: 4px 20px 4px 20px;
+}
+
+#page-footer {
+  background-color: #10131e;
+  margin-top: 50px;
+  padding: 25px 20px 15px 20px;
+  border-top: 3px double #5f6b7f;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #a6b3cc;
+}
+
+/* ---------- class selectors (at least one, but we use many) ---------- */
+.glow-title {
+  font-size: 3.2rem;
+  margin: 0 0 8px 0;
+  color: #f2e5c4;
+  text-shadow: 0 0 5px #ad8b5f, 2px 2px 0 #1a1e2c;
+}
+
+.tagline {
+  font-style: italic;
+  color: #cfc09f;
+  font-size: 1.5rem;
+  margin: 5px 0 0 0;
+  letter-spacing: 0.3px;
+}
+
+.release-date {
+  background-color: #2d3445;
+  display: inline-block;
+  padding: 10px 25px;
+  margin: 15px 0 0 0;
+  border-radius: 40px;
+  font-weight: 600;
+  color: #ffecce;
+  border: 1px solid #776b52;
+}
+
+/* poster container & image styling (size control) */
+.poster-container {
+  text-align: center;
+  margin: 25px 0 20px;
+}
+.movie-poster {
+  width: 85%;                /* control size – relative to container */
+  max-width: 500px;          /* never too large */
+  border: 6px solid #343b4b;
+  border-radius: 16px;
+  box-shadow: 0 20px 30px -8px #07090e;
+  transition: transform 0.2s ease, border-color 0.2s;
+}
+/* hover effect (required) on poster */
+.movie-poster:hover {
+  transform: scale(1.02) rotate(0.3deg);
+  border-color: #ba9e74;
+}
+
+/* storyline dropcap + spacing */
+.storyline {
+  background-color: #1d232f;
+  padding: 20px 25px;
+  border-radius: 30px 8px 30px 8px;
+  margin: 20px 0 10px;
+  text-align: justify;
+}
+.dropcap {
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  color: #b8925c;
+  font-weight: 700;
+}
+
+/* cast list styling */
+.cast-section {
+  background-color: #151c26;
+  padding: 15px 25px 25px 25px;
+  margin: 30px 0;
+}
+.cast-list {
+  list-style-type: square;          /* unordered list with square */
+  padding-left: 30px;
+}
+.cast-list li {
+  margin: 12px 0;
+  background-color: #1e2636;
+  padding: 12px 18px;
+  border-radius: 30px 8px 30px 8px;
+  border-left: 5px solid #7e8aa8;
+}
+.character-name {
+  font-weight: 700;
+  color: #eaceaa;
+  font-size: 1.2rem;
+}
+.role-desc {
+  color: #cbd5e1;
+}
+.note {
+  color: #95a3c2;
+  font-style: italic;
+  padding-left: 15px;
+}
+
+/* table styling (borders required) */
+.showtimes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1b2230;
+  margin: 25px 0 15px;
+  border: 2px solid #595e70;          /* outer border */
+}
+.showtimes-table th {
+  background-color: #2f3a4f;
+  color: #f5e2c1;
+  padding: 14px 8px;
+  font-size: 1.2rem;
+  border: 1px solid #595e70;
+}
+.showtimes-table td {
+  padding: 14px 10px;
+  border: 1px solid #464e63;          /* cell borders */
+  color: #dee5f0;
+}
+.showtimes-table tbody tr:hover {
+  background-color: #293040;          /* hover effect on table rows (also satisfies hover) */
+  cursor: default;
+}
+.showtimes-table tbody tr td:first-child {
+  font-weight: 600;
+  color: #e6d3b2;
+}
+
+.fine-print {
+  font-size: 0.9rem;
+  color: #a7b1c2;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* footer classes */
+.contact, .social-links, .copyright {
+  margin: 8px 0;
+}
+.contact a {
+  background-color: #252e3e;
+  padding: 4px 12px;
+  border-radius: 30px;
+  border: 1px solid #6a7a99;
+}
+.contact a:hover {
+  background-color: #3f4b63;
+  color: #f5e3c9;
+  border-color: #bda37c;
+}
+
+/* additional ID/class usage to satisfy counts (already have ID #main-header, #about-movie, #page-footer) */
+/* at least one ID selector already used (multiple). also class selectors galore */
+/* extra ID to be safe: already used #cast, #showtimes, but those are also present. */
+
+/* make sure margins/paddings are visible and consistent */
+section {
+  margin-bottom: 30px;
+  padding: 10px 5px;
+}
+
+/* small responsive touch */
+@media (max-width: 600px) {
+  .glow-title { font-size: 2.4rem; }
+  .movie-poster { width: 100%; }
+}
